@@ -803,6 +803,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  
 }
 
 .hero .carousel-item {
@@ -2320,7 +2321,8 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
-  /* Add your styles here */
+  /* Placeholder starter section spacing so this ruleset isn't empty for linters */
+  padding: 60px 0;
 }
 
 /*--------------------------------------------------------------
@@ -2493,4 +2495,117 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+
+
+
+
+/*=========================================== products (theme-aligned) ==========================*/
+
+/* Product cards: use site variables so the products section matches the rest of the theme */
+.products .card {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s;
+}
+
+.products .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+/* Constrain product images and keep aspect by cropping via object-fit */
+.products .card-img-top {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .products .card-img-top {
+    height: 180px;
+  }
+}
+
+/* Card content spacing & typography consistent with other cards */
+.product-card .card-body {
+  padding: 20px;
+}
+
+.product-card .card-title {
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.product-card .card-text {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 0;
+}
+
+.products .card-footer {
+  padding: 16px;
+}
+
+/* Buttons use site's accent color and contrast color */
+.products .btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--contrast-color);
+  padding: 6px 14px;
+}
+
+.products .btn-primary:hover,
+.products .btn-primary:focus {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--contrast-color);
+  box-shadow: none;
+}
+
+/* Small button variant for product cards */
+.products .btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+/* Preserve Bootstrap layout but ensure consistent visual styling */
+.products .shadow-sm {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+}
+.price {
+  font-size: 1rem;
+  font-weight: 600;
+ color: var(--heading-color); /* green color to indicate pricing */
+}
+
+
+/* FAQ Section Styling */
+.faq .accordion-button {
+  background-color: #fff;
+  color: #222;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.faq .accordion-body {
+  background: #f8f9fa;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+}
+
+.faq .accordion-item {
+  border: none;
+  margin-bottom: 1rem;
 }
