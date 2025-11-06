@@ -2609,3 +2609,30 @@ section,
   border: none;
   margin-bottom: 1rem;
 }
+
+
+.products h2 {
+  font-weight: 700;
+  color: #ff7b00;
+  margin-bottom: 15px;
+}
+.products p {
+  color: #555;
+  line-height: 1.7;
+}
+.products ul {
+  list-style: none;
+  padding-left: 0;
+}
+.products ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.products img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
