@@ -2772,3 +2772,11 @@ i.bi-check-all:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
+
+
+#social-services img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;    /* fills neatly */
+  border-radius: 12px;
+}
